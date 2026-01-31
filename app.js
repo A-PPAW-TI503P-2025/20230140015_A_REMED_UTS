@@ -47,6 +47,8 @@ app.post('/api/borrow', checkRole('user'), async (req, res) => {
 });
 
 // Jalankan Server & Sinkronisasi DB
-sequelize.sync({ alter: true }).then(() => {
-    app.listen(3000, () => console.log('Server running on http://localhost:3000'));
-}).catch(err => console.log('DB Error: ' + err));
+sequelize.sync({ alter: true })
+    .then(() => {
+        app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+    })
+    .catch(err => console.log('DB Error: ' + err));

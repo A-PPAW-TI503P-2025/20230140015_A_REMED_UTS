@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('remed_paw', 'root', '', { // Pastikan password kosong jika pakai XAMPP standar
-    host: 'localhost',
+const sequelize = new Sequelize('remed_paw', 'root', '', { 
+    host: '127.0.0.1',
     dialect: 'mysql',
     logging: false
 });
